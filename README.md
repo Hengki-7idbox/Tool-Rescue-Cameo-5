@@ -5,7 +5,7 @@ Aplikasi desktop Windows untuk **memulihkan Silhouette CAMEO 5 yang "brick"**
 lewat **USB**.
 
 Dibuat dari kasus nyata: CAMEO 5 brick akibat listrik mati saat update firmware via
-Bluetooth, lalu dipulihkan lewat **skrip USB mentah** (`Flash.exe`) — bukan lewat
+Bluetooth, lalu dipulihkan lewat **skrip USB mentah** (`Flash.exe`), bukan lewat
 aplikasi GUI ini.
 
 ---
@@ -19,7 +19,7 @@ aplikasi GUI ini.
 > mentah** (skrip `Flash.exe` / `Flash.cs`), sedangkan aplikasi GUI ini dibuat dari
 > logika yang sama namun **belum pernah dijalankan ke device brick**.
 
-**Yang berhasil kemarin (17 Oktober 2026)** — pemulihan dilakukan **langsung via skrip
+**Yang berhasil kemarin (17 Oktober 2026)**: pemulihan dilakukan **langsung via skrip
 mentah**, bukan lewat aplikasi ini:
 kirim firmware **satu arah** ke interface USBPRINT → `1B 12` (masuk mode update) →
 isi file `.S` (850 byte/blok) → `1B 05` (finalize) → **cabut-colok power**.
@@ -43,7 +43,7 @@ isi file `.S` (850 byte/blok) → `1B 05` (finalize) → **cabut-colok power**.
 > `Flash.cs` script). This GUI app is built from the same logic but **has never been run
 > against a bricked device**.
 
-**What worked (17 Oct 2026)** — the recovery was done **directly via the raw script**,
+**What worked (17 Oct 2026)**: the recovery was done **directly via the raw script**,
 not through this app:
 send firmware **one-way** to the USBPRINT interface → `1B 12` (enter update mode) →
 the `.S` file bytes (850 bytes/chunk) → `1B 05` (finalize) → **power-cycle**.
@@ -65,20 +65,20 @@ the `.S` file bytes (850 bytes/chunk) → `1B 05` (finalize) → **power-cycle**
 ## Unduh & Pakai (tanpa install)
 
 1. Unduh **`Hasil/Tool App/publish/CameoRescue.exe`** (satu file, mandiri).
-2. Double-click. Tidak perlu install .NET — runtime sudah terbundel.
+2. Double-click. Tidak perlu install .NET, runtime sudah terbundel.
 3. Ikuti tab **Flashing** atau **Perbaikan USB**.
 
 > Exe ini **self-contained**: jalan di Windows 10/11 64-bit tanpa syarat tambahan.
 
 ## Fitur
 
-- **Tab Flashing** – deteksi perangkat, validasi firmware (header + SHA256), wizard
+- **Tab Flashing**: deteksi perangkat, validasi firmware (header + SHA256), wizard
   pengiriman firmware (progress + log), verifikasi hasil. Ada **mode dry-run** (uji
   tanpa menulis).
-- **Tab Perbaikan USB** – diagnosa, scan ulang USB, restart perangkat, reset hub USB,
+- **Tab Perbaikan USB**: diagnosa, scan ulang USB, restart perangkat, reset hub USB,
   buka Device Manager (aksi tertentu butuh Administrator).
-- **Tab Panduan** – panduan singkat di dalam aplikasi.
-- **Dua bahasa** – Indonesia & English (bisa diganti langsung).
+- **Tab Panduan**: panduan singkat di dalam aplikasi.
+- **Dua bahasa**: Indonesia & English (bisa diganti langsung).
 - Firmware CAMEO 5 **sudah tertanam** di dalam aplikasi.
 
 ## Cara Pemulihan Singkat
