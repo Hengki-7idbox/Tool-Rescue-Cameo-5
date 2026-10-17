@@ -1,0 +1,14 @@
+# ==== File besar / tidak perlu masuk repo ====
+SS_V5.0.402.001_W6R.exe
+
+# ==== Output build ====
+**/bin/
+**/obj/
+**/publish/logs/
+*.user
+*.suo
+
+# ==== Sampah OS ====
+Thumbs.db
+desktop.ini
+.DS_Store

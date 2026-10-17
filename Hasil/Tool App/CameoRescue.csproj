@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>CameoRescue</AssemblyName>
+    <RootNamespace>CameoRescue</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0.0</Version>
+    <Product>CAMEO 5 Rescue Tool</Product>
+    <AssemblyTitle>CAMEO 5 Rescue Tool</AssemblyTitle>
+    <Company>Personal Repair Utility</Company>
+    <Copyright>2026</Copyright>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CAMEO5_V105_R0007.S">
+      <LogicalName>CameoRescue.fw.cameo5_v105</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CAMEO5Alpha_V101_R0002.S">
+      <LogicalName>CameoRescue.fw.cameo5alpha_v101</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
